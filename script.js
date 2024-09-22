@@ -1,18 +1,28 @@
-function togglePanel(content) {
+function togglePanel(content, triggerId) {
     const panel = document.getElementById("right-panel");
     const contentElement = document.querySelector('.main-content');
     
-    if (panel.classList.contains("open")) {
+    if (panel.classList.contains("open") && panel.getAttribute("data-opened") === triggerId) {
         panel.classList.remove("open");
+        contentElement.classList.remove('with-panel');
         setTimeout(() => {
-            panel.innerHTML = content;
-            panel.classList.add("open");
-            contentElement.classList.add('with-panel');
+            panel.innerHTML = "";
         }, 400);
     } else {
-        panel.innerHTML = content;
-        panel.classList.add("open");
-        contentElement.classList.add('with-panel');
+        if (panel.classList.contains("open")) {
+            panel.classList.remove("open");
+            setTimeout(() => {
+                panel.innerHTML = content;
+                panel.setAttribute("data-opened", triggerId);
+                panel.classList.add("open");
+                contentElement.classList.add('with-panel');
+            }, 400);
+        } else {
+            panel.innerHTML = content;
+            panel.setAttribute("data-opened", triggerId);
+            panel.classList.add("open");
+            contentElement.classList.add('with-panel');
+        }
     }
 }
 
@@ -24,7 +34,7 @@ document.getElementById("sobre-autora").addEventListener("click", function() {
             <p>Ela atrai leitores com suas descrições vívidas e personagens complexos.</p>
         </div>
     `;
-    togglePanel(content);
+    togglePanel(content, "sobre-autora");
 });
 
 document.getElementById("obras").addEventListener("click", function() {
@@ -39,7 +49,7 @@ document.getElementById("obras").addEventListener("click", function() {
             </ul>
         </div>
     `;
-    togglePanel(content);
+    togglePanel(content, "obras");
 });
 
 document.getElementById("contato").addEventListener("click", function() {
@@ -50,5 +60,5 @@ document.getElementById("contato").addEventListener("click", function() {
             <p>Email: <a href="mailto:samcquintana@gmail.com">samcquintana@gmail.com</a></p>
         </div>
     `;
-    togglePanel(content);
+    togglePanel(content, "contato");
 });
