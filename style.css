@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.sidebar {
+    width: 120px;
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+    border-right: 2px solid #333;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a:hover {
+    color: #555;
+    transform: scale(1.1);
+}
+
+.main-content {
+    margin-left: 140px;
+    padding: 40px;
+    transition: width 0.3s ease;
+    width: calc(100% - 160px);
+    margin-right: 40px;
+}
+
+.main-content.with-panel {
+    width: calc(100% - 460px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    outline: none;
+    background-color: #fff;
+}
+
+.search-bar input:focus {
+    border-color: #555;
+    background-color: #eee;
+}
+
+.biography-section {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.author-image img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.biography-info {
+    margin-left: 30px;
+}
+
+.biography-info h2 {
+    font-size: 28px;
+    color: #000;
+}
+
+.biography-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.content-section {
+    margin-top: 40px;
+}
+
+.post {
+    border: 2px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.gallery {
+    margin-top: 30px;
+}
+
+.gallery h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+.image-thumbnail {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    margin-right: 20px;
+    border: 2px solid #333;
+    background-color: #ddd;
+}
+
+.right-panel {
+    width: 300px;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    background-color: #fff;
+    padding: 20px;
+    border-left: 2px solid #333;
+    transition: transform 0.4s ease;
+}
+
+.right-panel.open {
+    transform: translateX(-300px);
+}
+
+.author-info,
+.works-info,
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.works-info ul {
+    list-style-type: none;
+}
+
+.author-info,
+.works-info,
+.contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.author-info,
+.works-info,
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
