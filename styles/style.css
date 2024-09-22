@@ -12,7 +12,7 @@ body {
 
 .sidebar {
     width: 120px;
-    background-color: #fff;
+    background-color: #f8f8f8;
     height: 100vh;
     position: fixed;
     border-right: 2px solid #333;
@@ -65,12 +65,12 @@ header {
     padding: 10px;
     border: 2px solid #333;
     outline: none;
-    background-color: #fff;
+    background-color: #f8f8f8;
 }
 
 .search-bar input:focus {
     border-color: #555;
-    background-color: #eee;
+    background-color: #f8f8f8;
 }
 
 .theme-toggle {
@@ -154,7 +154,7 @@ header {
     border: 2px solid #333;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #f8f8f8;
 }
 
 .gallery {
@@ -183,7 +183,7 @@ header {
     position: fixed;
     right: -300px;
     top: 0;
-    background-color: #fff;
+    background-color: #f8f8f8;
     padding: 20px;
     border-left: 2px solid #333;
     transition: transform 0.4s ease;
@@ -220,4 +220,92 @@ header {
 .contact-info p {
     font-size: 16px;
     line-height: 1.6;
+}
+
+footer {
+    background-color: #000;
+    color: #f8f8f8;
+    text-align: center;
+    padding: 10px 0;
+}
+  
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        background-color: #f8f8f8;
+        border-bottom: 2px solid #333;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .search-bar input {
+        padding: 8px;
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-top: 60px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .biography-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .biography-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .author-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .search-bar input {
+        padding: 8px;
+    }
+
+    .image-thumbnail {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-panel {
+        width: 100%;
+        right: -100%;
+    }
+
+    .right-panel.open {
+        transform: translateX(-100%);
+    }
 }
