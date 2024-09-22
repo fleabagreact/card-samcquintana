@@ -1,3 +1,27 @@
+document.getElementById('toggle-theme').addEventListener('click', function() {
+    const body = document.body;
+    const themeIcon = document.querySelector('#toggle-theme i');
+    const themeLink = document.getElementById('theme-link');
+
+    if (!themeLink) {
+        console.error('Theme link element not found!');
+        return;
+    }
+
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        themeLink.setAttribute('href', 'styles/dark-mode.css');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        themeLink.setAttribute('href', 'styles/style.css');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+});
+
+
 function togglePanel(content, triggerId) {
     const panel = document.getElementById("right-panel");
     const contentElement = document.querySelector('.main-content');
