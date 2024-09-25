@@ -150,11 +150,12 @@ header {
     margin-top: 40px;
 }
 
-.post {
+.quote {
     border: 2px solid #333;
     padding: 20px;
     margin-bottom: 20px;
     background-color: #f8f8f8;
+    font-size: 16px;
 }
 
 .gallery {

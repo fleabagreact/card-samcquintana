@@ -54,8 +54,8 @@ document.getElementById("sobre-autora").addEventListener("click", function() {
     const content = `
         <div class="author-info">
             <h4>Sobre a Autora</h4>
-            <p>Samanta C. Quintana é uma autora brasileira conhecida por seu estilo envolvente e emocional.</p>
-            <p>Ela atrai leitores com suas descrições vívidas e personagens complexos.</p>
+            <p>Samanta escreve desde que se entende por gente, e apesar de não ter nada publicado (ainda), tem criatividade pra dar e vender.</p>
+            <p>Com uma escrita focada no tempo psicológico dos personagens, "Eu espero que você goste de Taylor Swift" chega em janeiro na loja Kindle</p>
         </div>
     `;
     togglePanel(content, "sobre-autora");
@@ -65,11 +65,10 @@ document.getElementById("obras").addEventListener("click", function() {
     const content = `
         <div class="works-info">
             <h4>Obras Publicadas</h4>
-            <p>Confira abaixo algumas das obras mais populares de Samanta:</p>
             <ul>
-                <li>A Jornada da Alma</li>
-                <li>Reflexos de um Passado</li>
-                <li>O Eco do Silêncio</li>
+                <li>07•17</li>
+                <li>Eu espero que você goste de Taylor Swift</li>
+                <li>Os Segredos dos Bosques</li>
             </ul>
         </div>
     `;
